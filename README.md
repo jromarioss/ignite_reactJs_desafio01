@@ -1,6 +1,6 @@
 # RocketSeat - Ignite desafio 01 de react Js
 
-## Para nstalar as dependências
+## Para instalar as dependências
 npm install
 
 ## Para iniciar o projeto

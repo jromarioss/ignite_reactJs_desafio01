@@ -1,0 +1,78 @@
+.listTask {
+  width: 46rem;
+  margin: 1.5rem auto 0.75rem;
+}
+
+.listTask .task {
+  width: 100%;
+  padding: 1rem 3.25rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--gray-500);
+  border: 1px solid var(--gray-400);
+  border-radius: 8px;
+  gap: 0.75rem;
+  color: var(--gray-100);
+  font-family: 'Inter', sans-serif;
+}
+.listTask .task label {
+  cursor: pointer;
+  position: relative;
+}
+
+.listTask .task input {
+  width: 0;
+  height: 0;
+}
+
+.listTask .task .trashInput {
+  font-size: 1.5rem;
+  color: var(--gray-300);
+  transition: color ease-in .2s;
+}
+.listTask .task .trashInput:hover {
+  color: var(--danger);
+}
+
+.listTask .task .divRadio {
+  position: absolute;
+  top: 0;
+  padding: 0.625rem;
+  width: 1.090625rem;
+  height: 1.090625rem;
+  border-radius: 50%;
+  border: 2px solid var(--blue);
+}
+
+.listTask .task .divRadio::after {
+  content: '✓';
+  border-radius: 50%;
+  background-color: var(--purple);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -2px;
+  border: 3px solid var(--purple);
+  left: -2px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+.listTask .task input:checked ~ .divRadio::after {
+  display: flex;
+}
+
+
+.listTask .task button {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.listTask .task .taskDone {
+  text-decoration: line-through;
+  color: var(--gray-300);
+}
